@@ -444,6 +444,7 @@
             <ul>
               <li>Windows 10 或 Windows 11</li>
               <li>不需要額外安裝執行環境</li>
+              <li>介面以 OpenGL 2.0 繪製，不支援時自動改用 Direct3D 12（必要時由 Windows 以 CPU 繪製）</li>
               <li>MCP 截圖提示邊框需 Windows 10 2004 以上</li>
               <li>從原始碼編譯需 Rust 1.88 以上</li>
             </ul>
@@ -483,6 +484,10 @@
         <details>
           <summary>快捷鍵沒反應或設定失敗？</summary>
           <p>該組合可能已被其他程式佔用。在設定中輸入另一組（例如 <code>Alt+F9</code>）並按「套用快捷鍵」，若註冊失敗會顯示錯誤並保留原本的快捷鍵。</p>
+        </details>
+        <details>
+          <summary>在伺服器、虛擬機或遠端桌面上打不開？</summary>
+          <p>程式預設以 OpenGL 2.0 繪製介面。若電腦沒有 OpenGL 2.0（例如只有 ASPEED 等伺服器顯示晶片、虛擬顯示卡，或部分遠端桌面工作階段），會自動改用 Direct3D 12；顯示卡也不支援時，Windows 會以內建的 WARP 改用 CPU 繪製。兩種方式都失敗時，會跳出錯誤視窗並列出原因。</p>
         </details>
         <details>
           <summary>MCP 伺服器需要主程式在執行嗎？</summary>
