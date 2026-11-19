@@ -35,7 +35,6 @@ assets/
   icon.png                    App 圖示
   shot-main-{dark,light}.png  主視窗截圖（1584 × 1132）
   shot-annotate-{dark,light}.png  預覽與標註工具列截圖（1234 × 942）
-tools/        重拍 App 截圖用的 PowerShell 腳本與流程說明（見 tools/README.md）
 CNAME         GitHub Pages 自訂網域
 ```
 
@@ -62,7 +61,7 @@ python -m http.server 5180
 
 - **新版本發佈**：下載連結指向 GitHub Release 的 zip（目前是 `v0.10.0-beta`）。發佈新版後，請更新 `index.html` 中的 Release 網址、版本號（`V0.10.0 beta`）與 zip 檔案大小。
 - **更換 App 截圖**：深色與淺色各一張，保持相同視窗大小與內容，替換 `assets/` 中的同名檔案，並更新 `<img>` 的 `width` / `height`。截圖中若出現使用者名稱（例如儲存路徑、狀態列），請先遮蔽再放上網站。
-  - 完整步驟與腳本在 [`tools/`](tools/README.md)。
+  - 完整步驟與腳本在 rust-screen-app 的 `tools/screenshots/`（私人 repo，不隨網站發佈）。
   - 目前的截圖（V0.10.0 beta）擷取的是一張虛構的「Acme Cloud 帳號設定」示範頁，名稱、信箱、金鑰與密碼都是假資料。
   - 拍攝時以 `RUST_SCREEN_CONFIG_DIR` 指向暫存設定資料夾，避免動到自己的設定；儲存資料夾設為 `C:\Users\Public\Pictures\RustScreen`，畫面上的路徑就不會出現使用者名稱，拍完再刪除測試產生的檔案。
   - [rust-screen](https://github.com/showdong7/rust-screen) 與 rust-screen-app 的 README 使用同一組圖片（`docs/screenshot-*.png`），更換截圖後請一併更新。Release 說明的截圖網址固定在發佈當時的 commit，不需要修改。
