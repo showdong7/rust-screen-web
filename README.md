@@ -54,6 +54,6 @@ python -m http.server 5180
 
 ## 更新網站時
 
-- **新版本發佈**：下載連結指向 GitHub Release 的 zip（目前是 `v0.9.1-beta`）。發佈新版後，請更新 `index.html` 中的 Release 網址、版本號（`V0.9.1 beta`）與 zip 檔案大小。
+- **新版本發佈**：下載連結指向 GitHub Release 的 zip（目前是 `v0.10.0-beta`）。發佈新版後，請更新 `index.html` 中的 Release 網址、版本號（`V0.10.0 beta`）與 zip 檔案大小。
 - **更換 App 截圖**：深色與淺色各一張，保持相同視窗大小與內容，替換 `assets/` 中的同名檔案，並更新 `<img>` 的 `width` / `height`。截圖中若出現使用者名稱（例如儲存路徑、狀態列），請先遮蔽再放上網站。
 - **MCP 工具或參數變更**：同步更新「AI · MCP」與「常見問題」區塊的說明。
