@@ -70,14 +70,14 @@
           <h1>按下快捷鍵，拖曳，<span class="hl">放開即存。</span></h1>
           <p class="lead">Rust Screen 是輕量的桌面截圖工具。在任何程式中按 <kbd>Ctrl</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>S</kbd>，直接在螢幕上框選，放開滑鼠就存成 PNG 並複製到剪貼簿；截完能在預覽裡畫框、加箭頭、寫中文註解。另附 <a href="#mcp">MCP 伺服器</a>，讓 Claude 等 AI 助理也能看見你的螢幕。</p>
           <div class="cta">
-            <a class="btn btn--primary" href="https://github.com/showdong7/rust-screen/releases/download/v0.10.0-beta/rust-screen.zip">
+            <a class="btn btn--primary" href="https://github.com/showdong7/rust-screen/releases/download/v0.11.0-beta/rust-screen.zip">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
               下載 Windows 版
             </a>
             <a class="btn btn--ghost" href="#mcp">接上 AI 助理</a>
           </div>
           <ul class="facts">
-            <li><strong>V0.10.0 beta</strong>單一執行檔、免安裝</li>
+            <li><strong>V0.11.0 beta</strong>單一執行檔、免安裝</li>
             <li><strong>6 個</strong>MCP 截圖工具</li>
             <li><strong>MIT</strong>開放原始碼授權</li>
           </ul>
@@ -127,6 +127,11 @@
         </header>
         <div class="features">
           <article class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><rect x="3" y="12" width="9" height="9" rx="1"/><path d="M19 5l-6 6M13 7v4h4"/></svg>
+            <h3>縮小輸出・PNG／JPEG</h3>
+            <p>儲存與複製時可依螢幕縮放還原、按比例縮小或限制長邊，也能改存 JPEG，貼進 email 或文件大小剛好。自動命名、不覆寫既有檔案，同時複製到剪貼簿。</p>
+          </article>
+          <article class="feature">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
             <h3>馬賽克與模糊</h3>
             <p>拖曳框住帳號、密碼或個資，套上馬賽克或模糊。格子大小與模糊半徑可調，輸出的圖片不保留區域內的原始像素。</p>
@@ -134,7 +139,7 @@
           <article class="feature">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg>
             <h3>先編輯再儲存</h3>
-            <p>選用。擷取後直接進入編輯，先遮蔽敏感資訊，按「儲存 PNG」或 <kbd>Ctrl</kbd>+<kbd>S</kbd> 才寫入硬碟與剪貼簿。</p>
+            <p>選用。擷取後直接進入編輯，先遮蔽敏感資訊，按「儲存」或 <kbd>Ctrl</kbd>+<kbd>S</kbd> 才寫入硬碟與剪貼簿。</p>
           </article>
           <article class="feature">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>
@@ -159,12 +164,7 @@
           <article class="feature">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="9" height="7" rx="1"/><rect x="13" y="5" width="9" height="7" rx="1"/><path d="M6 16h12M9 19h6"/></svg>
             <h3>多螢幕與高 DPI</h3>
-            <p>以實體像素擷取，支援跨螢幕選取與不同縮放比例。預覽依視窗大小縮放，輸出的 PNG 仍保留原始解析度。</p>
-          </article>
-          <article class="feature">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="11" height="14" rx="1.5"/><path d="M9 21h10a1 1 0 0 0 1-1V8"/></svg>
-            <h3>PNG ＋ 剪貼簿</h3>
-            <p>自動命名、不覆寫既有檔案，可自訂儲存資料夾。存檔同時複製到剪貼簿，直接貼到聊天或文件。</p>
+            <p>以實體像素擷取，支援跨螢幕選取與不同縮放比例。預覽依視窗大小縮放，輸出預設保留原始解析度。</p>
           </article>
           <article class="feature">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17h18M6 17V9a6 6 0 0 1 12 0v8"/><circle cx="17" cy="20" r="1.5"/></svg>
@@ -184,7 +184,7 @@
           <article class="feature">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg>
             <h3>自動記住設定</h3>
-            <p>主題、快捷鍵、模式、資料夾、固定尺寸、延遲、標註樣式與浮水印都會保存，變更後約 0.8 秒自動寫入。</p>
+            <p>主題、快捷鍵、模式、資料夾、固定尺寸、延遲、標註樣式、輸出尺寸與格式及浮水印都會保存，變更後約 0.8 秒自動寫入。</p>
           </article>
         </div>
       </div>
@@ -307,7 +307,7 @@
           <div class="mcp__setup">
             <h3>三步接上</h3>
             <ol class="setup-steps">
-              <li>下載 <a href="https://github.com/showdong7/rust-screen/releases/download/v0.10.0-beta/rust-screen-mcp.zip"><code>rust-screen-mcp.zip</code></a>，解壓縮後把 <code>rust-screen-mcp.exe</code> 放到固定位置（例如 <code>C:\Tools\</code>）。</li>
+              <li>下載 <a href="https://github.com/showdong7/rust-screen/releases/download/v0.11.0-beta/rust-screen-mcp.zip"><code>rust-screen-mcp.zip</code></a>，解壓縮後把 <code>rust-screen-mcp.exe</code> 放到固定位置（例如 <code>C:\Tools\</code>）。</li>
               <li>在你的 MCP 用戶端註冊它（路徑換成實際位置）：</li>
             </ol>
 
@@ -431,9 +431,9 @@
               <h3>Rust Screen</h3>
               <p>截圖、標註、系統匣常駐的桌面程式。設定存在 <code>%APPDATA%\RustScreen</code>，圖片預設存到 <code>%USERPROFILE%\Pictures\RustScreen</code>。</p>
             </div>
-            <a class="btn btn--primary btn--lg" href="https://github.com/showdong7/rust-screen/releases/download/v0.10.0-beta/rust-screen.zip">
+            <a class="btn btn--primary btn--lg" href="https://github.com/showdong7/rust-screen/releases/download/v0.11.0-beta/rust-screen.zip">
               <span class="btn__row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>rust-screen.zip</span>
-              <small>V0.10.0 beta · ZIP 4.2 MB</small>
+              <small>V0.11.0 beta · ZIP 4.3 MB</small>
             </a>
           </article>
           <article class="dl">
@@ -444,9 +444,9 @@
               <h3>Rust Screen MCP</h3>
               <p>給 AI 助理使用的 MCP stdio 伺服器，可單獨使用，不需要主程式。</p>
             </div>
-            <a class="btn btn--ghost btn--lg" href="https://github.com/showdong7/rust-screen/releases/download/v0.10.0-beta/rust-screen-mcp.zip">
+            <a class="btn btn--ghost btn--lg" href="https://github.com/showdong7/rust-screen/releases/download/v0.11.0-beta/rust-screen-mcp.zip">
               <span class="btn__row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>rust-screen-mcp.zip</span>
-              <small>V0.10.0 beta · ZIP 544 KB</small>
+              <small>V0.11.0 beta · ZIP 547 KB</small>
             </a>
           </article>
         </div>
@@ -497,7 +497,7 @@
         </details>
         <details>
           <summary>怎麼確認目前用的是哪一版？</summary>
-          <p>按主視窗右上角的「關於」，會顯示版本號，以及官網與 GitHub 的連結，點一下就能開啟。目前版本為 V0.10.0 beta。</p>
+          <p>按主視窗右上角的「關於」，會顯示版本號，以及官網與 GitHub 的連結，點一下就能開啟。目前版本為 V0.11.0 beta。</p>
         </details>
         <details>
           <summary>右下角找不到圖示？</summary>
